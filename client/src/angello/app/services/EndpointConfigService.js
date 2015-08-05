@@ -1,10 +1,11 @@
+/// <reference path="../../../../../typings/angularjs/angular.d.ts"/>
 angular.module('Angello.Common')
     //.constant('CURRENT_BACKEND', 'node')
     .constant('CURRENT_BACKEND', 'firebase')
     .service('EndpointConfigService', function($rootScope, CURRENT_BACKEND) {
         var service = this,
             endpointMap = {
-                firebase: { URI: 'https://my-first-angello.firebaseio.com/', root: 'clients/', format: '.json' },
+                firebase: { URI: 'https://mike-angello.firebaseio.com/', root: 'clients/', format: '.json' },
                 node: { URI: 'http://localhost:4000/', root: 'api/clients/', format: ''}
             },
             currentEndpoint = endpointMap[CURRENT_BACKEND],
